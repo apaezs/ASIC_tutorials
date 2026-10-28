@@ -1,0 +1,25 @@
+session fifo_regression {
+    top_dir : $ENV(PWD)/regression;
+};
+
+group fifo_tests {
+
+    scan_script : "vm_scan.pl ius.flt shell.flt";
+
+    test basic {
+        run_script : "xrun -F $ENV(PWD)/run.f -coverage all -covoverwrite +TEST=basic";
+    };
+
+    test fill_empty {
+        run_script : "xrun -F $ENV(PWD)/run.f -coverage all -covoverwrite +TEST=fill_empty";
+    };
+
+    test overflow {
+        run_script : "xrun -F $ENV(PWD)/run.f -coverage all -covoverwrite +TEST=overflow";
+    };
+
+    test random {
+        run_script : "xrun -F $ENV(PWD)/run.f -coverage all -covoverwrite -svseed random +TEST=random";
+        count      : 5;
+    };
+};
