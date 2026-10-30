@@ -1,0 +1,26 @@
+# ---------- Verisium Manager (vManager) run outputs ----------
+regression/
+vmgr_merge_logs/
+vmanager.key
+.vmgr*/
+
+# ---------- Xcelium / coverage outputs ----------
+xcelium.d/
+INCA_libs/
+cov_work/
+cov_report/
+waves.shm/
+*.shm/
+.simvision/
+*.history
+*.key
+*.diag
+
+# ---------- Logs ----------
+*.log
+
+# ---------- Cadence environment files written per directory ----------
+cds.lib
+.cdsenv
+.cdsinit
+*.cdslck
